@@ -1,0 +1,8 @@
+{
+  "name": "crawl-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nthung0909/crawl-test-point-data.git",
+  "author": "ngthung0909 <nthung0909>",
+  "license": "MIT"
+}
