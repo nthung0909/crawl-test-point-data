@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add fs
+  /usr/local/bin/node /usr/local/bin/yarn add √
 
 PATH: 
   /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/homebrew/bin:/opt/homebrew/sbin
@@ -14,12 +14,15 @@ Platform:
   darwin arm64
 
 Trace: 
-  SyntaxError: /Users/hugnnt/Documents/Research/Craw data/package.json: Unexpected token } in JSON at position 248
-      at JSON.parse (<anonymous>)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:1629:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+  TypeError [ERR_UNESCAPED_CHARACTERS]: https://registry.yarnpkg.com/√: Request path contains unescaped characters
+      at new NodeError (node:internal/errors:393:5)
+      at new ClientRequest (node:_http_client:182:13)
+      at Object.request (node:https:360:10)
+      at module.exports.Request.start (/usr/local/lib/node_modules/yarn/lib/cli.js:141452:32)
+      at module.exports.Request.end (/usr/local/lib/node_modules/yarn/lib/cli.js:142211:10)
+      at end (/usr/local/lib/node_modules/yarn/lib/cli.js:141265:14)
+      at Immediate.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141279:7)
+      at process.processImmediate (node:internal/timers:471:21)
 
 npm manifest: 
   {
@@ -30,7 +33,7 @@ npm manifest:
     "author": "ngthung0909 <nthung0909>",
     "license": "MIT",
     "dependencies": {
-      "axios": "^1.4.0",
+      "axios": "^1.4.0"
     }
   }
 
@@ -81,11 +84,6 @@ Lockfile:
       asynckit "^0.4.0"
       combined-stream "^1.0.8"
       mime-types "^2.1.12"
-  
-  fs@^0.0.1-security:
-    version "0.0.1-security"
-    resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
-    integrity sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==
   
   mime-db@1.52.0:
     version "1.52.0"
